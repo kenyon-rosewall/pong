@@ -16,7 +16,7 @@ import (
 // TODO: Rewrite drawing to be proportional to the window size
 // TODO: Create a few window sizes to choose from (config file?)
 const windowWidth, windowHeight int = 1080, 720
-const maxScore int = 11
+const maxScore int = 1
 
 const (
 	serveLeft = iota
@@ -404,9 +404,9 @@ func main() {
 			player2.collision(&ball, elapsedTime)
 		} else if state == start {
 			if player1.score == maxScore || player2.score == maxScore {
-				msg = "PLAYER 1 WINS"
+				msg = "Player 1 Wins"
 				if player2.score == maxScore {
-					msg = "PLAYER 2 WINS"
+					msg = "Player 2 Wins"
 				}
 			}
 			ball.reset(dir)
